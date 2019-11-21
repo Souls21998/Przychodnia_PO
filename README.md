@@ -1,2 +1,4 @@
 # Przychodnia_PO
-Przychodnia Chorzy Doktorzy --- Spółka z ograniczoną odpowiedzialnością  -- Projekt na zaliczenie z PO
+## Projekt na zaliczenie z PO
+### OPIS:
+Przychodnia Chorzy Doktorzy --- Spółka z ograniczoną odpowiedzialnością 
