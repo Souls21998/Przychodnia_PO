@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Przychodnia_PO
 {
-    class Lekarz : Osoba
+    class Lekarz : Osoba, ILekarz
     {
         Specjalizacja specjalizacja;
         int nr_gabinetu;
 
-        public Lekarz(Specjalizacja specjalizacja, int nr_gabinetu) : base (imie, nazwisko, wiek, ID, nr_telefonu)
+        public Lekarz(string imie, string nazwisko, int wiek, int ID, int nr_telefonu, Specjalizacja specjalizacja, int nr_gabinetu) : base(imie, nazwisko, wiek, ID, nr_telefonu)
         {
+         
             this.specjalizacja = specjalizacja;
             this.nr_gabinetu = nr_gabinetu;
         }

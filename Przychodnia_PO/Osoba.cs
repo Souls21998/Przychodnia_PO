@@ -14,7 +14,7 @@ namespace Przychodnia_PO
         protected int ID;
         protected int nr_telefonu;
 
-        public Osoba(string imie, string nazwisko, int wiek, int ID, int nr_telefonu)
+        protected Osoba(string imie, string nazwisko, int wiek, int ID, int nr_telefonu)
         {
             this.imie = imie;
             this.nazwisko = nazwisko;
@@ -22,5 +22,7 @@ namespace Przychodnia_PO
             this.ID = ID;
             this.nr_telefonu = nr_telefonu;
         }
+
+        //public abstract void PrzedstawSie()
     }
 }
