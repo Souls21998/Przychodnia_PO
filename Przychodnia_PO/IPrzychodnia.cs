@@ -8,5 +8,8 @@ namespace Przychodnia_PO
 {
     interface IPrzychodnia
     {
+        //void PrzeprowadzBadanie()
+        //void DodajPacjentaDoKolejki()
+        //
     }
 }

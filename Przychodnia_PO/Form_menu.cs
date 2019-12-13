@@ -14,6 +14,7 @@ namespace Przychodnia_PO
     {
         public Form_menu()
         {
+
             InitializeComponent();
         }
 

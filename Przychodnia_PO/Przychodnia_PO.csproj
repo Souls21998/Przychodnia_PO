@@ -68,6 +68,7 @@
     <Compile Include="IPacjent.cs" />
     <Compile Include="IPrzychodnia.cs" />
     <Compile Include="Lekarz.cs" />
+    <Compile Include="Lekarze.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Pacjent.cs" />
     <Compile Include="Program.cs" />

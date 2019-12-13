@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
     public partial class Form_lekarz : Form
     {
+        Lekarze lekarze = new Lekarze();
+
+
         public Form_lekarz()
         {
             InitializeComponent();
@@ -22,11 +19,35 @@ namespace Przychodnia_PO
             Form_menu f_menu = new Form_menu();
             this.Hide();
             f_menu.Show();
+       
         }
 
         private void Form_lekarz_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_test_Click(object sender, EventArgs e)
+        {
+            
+
+            lekarze.DodajLekarza("Paweł", "Bronk", 32, 980909, 997, Specjalizacja.ginekolog);
+            wyswietl();
+
+
+            listView_lista_lekarzy.View = View.Details;
+        }
+        void wyswietl()
+        {
+            var lista = lekarze.lista_lekarzy;
+
+            foreach (var item in lista)
+            {
+                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.nr_telefonu.ToString(), item.specjalizacja.ToString() };               
+              
+                var lvi = new ListViewItem(row);
+                listView_lista_lekarzy.Items.Add(lvi);
+            }
         }
     }
 }

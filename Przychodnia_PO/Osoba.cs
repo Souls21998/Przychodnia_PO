@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Przychodnia_PO
 {
-    abstract class Osoba
+    public abstract class Osoba
     {
-        protected string imie;
-        protected string nazwisko;
-        protected int wiek;
-        protected int ID;
-        protected int nr_telefonu;
+        public string imie;
+        public string nazwisko;
+        public int wiek;
+        public int ID;
+        public int nr_telefonu;
 
         protected Osoba(string imie, string nazwisko, int wiek, int ID, int nr_telefonu)
         {

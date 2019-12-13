@@ -28,5 +28,6 @@ namespace Przychodnia_PO
         {
             Application.Exit();
         }
+        
     }
 }

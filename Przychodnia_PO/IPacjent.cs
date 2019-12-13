@@ -8,5 +8,8 @@ namespace Przychodnia_PO
 {
     interface IPacjent
     {
+        //void WyswietlDane();
+        //void UsunPacjenta();
+        //void DodajPacjenta();
     }
 }

@@ -10,11 +10,15 @@ namespace Przychodnia_PO
     {
         int nr_gabinetu;
         string nazwa_gabinetu;
+        Lekarz lekarz;
 
-        public Przychodnia(int nr_gabinetu, string nazwa_gabinetu)
+        Queue<Pacjent> kolejka = new Queue<Pacjent>();
+
+        public Przychodnia(int nr_gabinetu, string nazwa_gabinetu, Lekarz lekarz)
         {
             this.nr_gabinetu = nr_gabinetu;
             this.nazwa_gabinetu = nazwa_gabinetu;
+            this.lekarz = lekarz;
         }
     }
 }
