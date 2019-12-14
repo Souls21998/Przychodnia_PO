@@ -6,8 +6,7 @@ namespace Przychodnia_PO
 {
     public partial class Form_lekarz : Form
     {
-        Lekarze lekarze = new Lekarze();
-
+        public Lekarze lekarze = new Lekarze();
 
         public Form_lekarz()
         {
@@ -29,25 +28,17 @@ namespace Przychodnia_PO
 
         private void btn_test_Click(object sender, EventArgs e)
         {
-            
-
             lekarze.DodajLekarza("Paweł", "Bronk", 32, 980909, 997, Specjalizacja.ginekolog);
-            wyswietl();
+            lekarze.DodajLekarza("Kamil", "Chomej", 27, 980908, 997112, Specjalizacja.kardiolog);
+            lekarze.DodajLekarza("Paweł", "Anton", 21, 980912, 76544321, Specjalizacja.psychiatra);
+            lekarze.UsunLekarza(980909);
+            lekarze.UsunLekarza(980908);
 
-
-            listView_lista_lekarzy.View = View.Details;
-        }
-        void wyswietl()
-        {
-            var lista = lekarze.lista_lekarzy;
-
-            foreach (var item in lista)
+            foreach (var item in lekarze.WyswietlLekarza())
             {
-                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.nr_telefonu.ToString(), item.specjalizacja.ToString() };               
-              
-                var lvi = new ListViewItem(row);
-                listView_lista_lekarzy.Items.Add(lvi);
+                listView_lista_lekarzy.Items.Add(item);
             }
-        }
+     
+        }    
     }
 }
