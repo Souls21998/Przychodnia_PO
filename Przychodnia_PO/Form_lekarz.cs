@@ -31,7 +31,6 @@ namespace Przychodnia_PO
             lekarze.DodajLekarza("Paweł", "Bronk", 32, 980909, 997, Specjalizacja.ginekolog);
             lekarze.DodajLekarza("Kamil", "Chomej", 27, 980908, 997112, Specjalizacja.kardiolog);
             lekarze.DodajLekarza("Paweł", "Anton", 21, 980912, 76544321, Specjalizacja.psychiatra);
-            lekarze.UsunLekarza(980909);
             lekarze.UsunLekarza(980908);
 
             foreach (var item in lekarze.WyswietlLekarza())

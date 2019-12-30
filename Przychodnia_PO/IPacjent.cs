@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Przychodnia_PO
 {
-    interface IPacjent
+    public interface IPacjent
     {
         //void WyswietlDane();
         //void UsunPacjenta();
