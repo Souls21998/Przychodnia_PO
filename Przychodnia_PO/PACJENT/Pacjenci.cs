@@ -6,7 +6,7 @@ namespace Przychodnia_PO
 {
     public class Pacjenci : IPacjent
     {
-        List<Pacjent> lista_pacjentow;
+        internal List<Pacjent> lista_pacjentow;
 
         public Pacjenci()
         {
@@ -17,6 +17,7 @@ namespace Przychodnia_PO
         {
             Pacjent pacjent = new Pacjent(imie, nazwisko, wiek, ID, nr_telefonu);
             lista_pacjentow.Add(pacjent);
+            
         }
 
         public List<ListViewItem> WyswietlPacjenta()
@@ -33,9 +34,10 @@ namespace Przychodnia_PO
             }
             return lista_elementow;
         }
+
         public void UsunPacjenta(int indeks)
         {
-            foreach (var item in lista_pacjentow.ToList()) //ToList() tworzy migawkę ponieważ lista nie nie moze byc modyfikowana w foreach
+            foreach (var item in lista_pacjentow.ToList()) 
             {
                 if (item.ID == indeks)
                 {

@@ -124,9 +124,9 @@
             // 
             // btn_dodaj
             // 
-            this.btn_dodaj.Location = new System.Drawing.Point(200, 288);
+            this.btn_dodaj.Location = new System.Drawing.Point(200, 275);
             this.btn_dodaj.Name = "btn_dodaj";
-            this.btn_dodaj.Size = new System.Drawing.Size(134, 23);
+            this.btn_dodaj.Size = new System.Drawing.Size(146, 35);
             this.btn_dodaj.TabIndex = 10;
             this.btn_dodaj.Text = "Dodaj pacjenta";
             this.btn_dodaj.UseVisualStyleBackColor = true;
@@ -134,9 +134,9 @@
             // 
             // btn_wstecz
             // 
-            this.btn_wstecz.Location = new System.Drawing.Point(63, 287);
+            this.btn_wstecz.Location = new System.Drawing.Point(63, 281);
             this.btn_wstecz.Name = "btn_wstecz";
-            this.btn_wstecz.Size = new System.Drawing.Size(75, 23);
+            this.btn_wstecz.Size = new System.Drawing.Size(89, 29);
             this.btn_wstecz.TabIndex = 11;
             this.btn_wstecz.Text = "WSTECZ";
             this.btn_wstecz.UseVisualStyleBackColor = true;

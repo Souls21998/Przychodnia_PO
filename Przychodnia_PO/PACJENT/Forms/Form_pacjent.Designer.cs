@@ -1,6 +1,8 @@
-﻿namespace Przychodnia_PO
+﻿using System.Windows.Forms;
+
+namespace Przychodnia_PO
 {
-    partial class Form_pacjent
+    partial class Form_pacjent : Forms
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +37,7 @@
             this.nazwisko = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.numer_telefonu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_dodaj_pacjenta = new System.Windows.Forms.Button();
-            this.btn_aktualizuj_list_view = new System.Windows.Forms.Button();
+            this.btn_usun_pacjenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_wstecz
@@ -65,7 +67,7 @@
             // 
             // ID
             // 
-            this.ID.Text = "ID";
+            this.ID.Text = "PESEL";
             // 
             // imie
             // 
@@ -86,7 +88,7 @@
             // 
             // btn_dodaj_pacjenta
             // 
-            this.btn_dodaj_pacjenta.Location = new System.Drawing.Point(526, 25);
+            this.btn_dodaj_pacjenta.Location = new System.Drawing.Point(491, 25);
             this.btn_dodaj_pacjenta.Name = "btn_dodaj_pacjenta";
             this.btn_dodaj_pacjenta.Size = new System.Drawing.Size(127, 43);
             this.btn_dodaj_pacjenta.TabIndex = 3;
@@ -94,22 +96,22 @@
             this.btn_dodaj_pacjenta.UseVisualStyleBackColor = true;
             this.btn_dodaj_pacjenta.Click += new System.EventHandler(this.btn_dodaj_pacjenta_Click);
             // 
-            // btn_aktualizuj_list_view
+            // btn_usun_pacjenta
             // 
-            this.btn_aktualizuj_list_view.Location = new System.Drawing.Point(178, 301);
-            this.btn_aktualizuj_list_view.Name = "btn_aktualizuj_list_view";
-            this.btn_aktualizuj_list_view.Size = new System.Drawing.Size(104, 23);
-            this.btn_aktualizuj_list_view.TabIndex = 4;
-            this.btn_aktualizuj_list_view.Text = "ODŚWIEŻ";
-            this.btn_aktualizuj_list_view.UseVisualStyleBackColor = true;
-            this.btn_aktualizuj_list_view.Click += new System.EventHandler(this.btn_aktualizuj_list_view_Click);
+            this.btn_usun_pacjenta.Location = new System.Drawing.Point(491, 74);
+            this.btn_usun_pacjenta.Name = "btn_usun_pacjenta";
+            this.btn_usun_pacjenta.Size = new System.Drawing.Size(127, 43);
+            this.btn_usun_pacjenta.TabIndex = 4;
+            this.btn_usun_pacjenta.Text = "Usun pacjenta";
+            this.btn_usun_pacjenta.UseVisualStyleBackColor = true;
+            this.btn_usun_pacjenta.Click += new System.EventHandler(this.btn_usun_pacjenta_Click);
             // 
             // Form_pacjent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_aktualizuj_list_view);
+            this.Controls.Add(this.btn_usun_pacjenta);
             this.Controls.Add(this.btn_dodaj_pacjenta);
             this.Controls.Add(this.listView_lista_pacjentow);
             this.Controls.Add(this.btn_wstecz);
@@ -129,6 +131,8 @@
         private System.Windows.Forms.ColumnHeader nazwisko;
         private System.Windows.Forms.ColumnHeader numer_telefonu;
         private System.Windows.Forms.Button btn_dodaj_pacjenta;
-        private System.Windows.Forms.Button btn_aktualizuj_list_view;
+        private System.Windows.Forms.Button btn_usun_pacjenta;
+
+        public new FormClosedEventHandler FormClosed { get; private set; }
     }
 }

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_menu : Form
+    public partial class Form_menu : Forms
     {
+       
         public Form_menu()
         {
 
             InitializeComponent();
+            
         }
 
         private void btn_zamknij_Click(object sender, EventArgs e)
@@ -40,6 +42,13 @@ namespace Przychodnia_PO
         private void Form_menu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_dane_pacjentow_Click(object sender, EventArgs e)
+        {
+            Form_dane_pacjent f_dane_pacjent = new Form_dane_pacjent();
+            f_dane_pacjent.Show();
+            this.Hide();
         }
     }
 }

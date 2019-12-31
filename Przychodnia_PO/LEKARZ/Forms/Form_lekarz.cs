@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_lekarz : Form
+    public partial class Form_lekarz : Forms
     {
         public Lekarze lekarze = new Lekarze();
 

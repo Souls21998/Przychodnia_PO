@@ -46,16 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_dodaj_pacjenta.cs">
+    <Compile Include="Form_dane_pacjent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_dodaj_pacjenta.Designer.cs">
+    <Compile Include="Form_dane_pacjent.Designer.cs">
+      <DependentUpon>Form_dane_pacjent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PACJENT\Forms\Form_dodaj_pacjenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACJENT\Forms\Form_dodaj_pacjenta.Designer.cs">
       <DependentUpon>Form_dodaj_pacjenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_lekarz.cs">
+    <Compile Include="LEKARZ\Forms\Form_lekarz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_lekarz.Designer.cs">
+    <Compile Include="LEKARZ\Forms\Form_lekarz.Designer.cs">
       <DependentUpon>Form_lekarz.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_menu.cs">
@@ -64,34 +70,47 @@
     <Compile Include="Form_menu.Designer.cs">
       <DependentUpon>Form_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_pacjent.cs">
+    <Compile Include="PACJENT\Forms\Form_pacjent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_pacjent.Designer.cs">
+    <Compile Include="PACJENT\Forms\Form_pacjent.Designer.cs">
       <DependentUpon>Form_pacjent.cs</DependentUpon>
     </Compile>
-    <Compile Include="ILekarz.cs" />
-    <Compile Include="IPacjent.cs" />
+    <Compile Include="PACJENT\Forms\Form_usun_pacjenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PACJENT\Forms\Form_usun_pacjenta.Designer.cs">
+      <DependentUpon>Form_usun_pacjenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LEKARZ\ILekarz.cs" />
+    <Compile Include="PACJENT\IPacjent.cs" />
     <Compile Include="IPrzychodnia.cs" />
-    <Compile Include="Lekarz.cs" />
-    <Compile Include="Lekarze.cs" />
+    <Compile Include="LEKARZ\Lekarz.cs" />
+    <Compile Include="LEKARZ\Lekarze.cs" />
     <Compile Include="Osoba.cs" />
-    <Compile Include="Pacjenci.cs" />
-    <Compile Include="Pacjent.cs" />
+    <Compile Include="PACJENT\Pacjenci.cs" />
+    <Compile Include="PACJENT\Pacjent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Przychodnia.cs" />
-    <EmbeddedResource Include="Form_dodaj_pacjenta.resx">
+    <Compile Include="Wizyta.cs" />
+    <EmbeddedResource Include="Form_dane_pacjent.resx">
+      <DependentUpon>Form_dane_pacjent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PACJENT\Forms\Form_dodaj_pacjenta.resx">
       <DependentUpon>Form_dodaj_pacjenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_lekarz.resx">
+    <EmbeddedResource Include="LEKARZ\Forms\Form_lekarz.resx">
       <DependentUpon>Form_lekarz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_pacjent.resx">
+    <EmbeddedResource Include="PACJENT\Forms\Form_pacjent.resx">
       <DependentUpon>Form_pacjent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PACJENT\Forms\Form_usun_pacjenta.resx">
+      <DependentUpon>Form_usun_pacjenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
