@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.btn_zamknij = new System.Windows.Forms.Button();
-            this.btn_dane_pacjentow = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_przejdz_autorzy = new System.Windows.Forms.Button();
             this.btn_przejdz_zarzadzaj_przychodnia = new System.Windows.Forms.Button();
             this.btn_run_test = new System.Windows.Forms.Button();
+            this.btn_karta_pacjenta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_zamknij
@@ -46,23 +46,13 @@
             this.btn_zamknij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_zamknij.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_zamknij.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_zamknij.Location = new System.Drawing.Point(12, 268);
+            this.btn_zamknij.Location = new System.Drawing.Point(12, 318);
             this.btn_zamknij.Name = "btn_zamknij";
             this.btn_zamknij.Size = new System.Drawing.Size(558, 44);
             this.btn_zamknij.TabIndex = 2;
             this.btn_zamknij.Text = "Zamknij";
             this.btn_zamknij.UseVisualStyleBackColor = true;
             this.btn_zamknij.Click += new System.EventHandler(this.btn_zamknij_Click);
-            // 
-            // btn_dane_pacjentow
-            // 
-            this.btn_dane_pacjentow.Location = new System.Drawing.Point(161, 462);
-            this.btn_dane_pacjentow.Name = "btn_dane_pacjentow";
-            this.btn_dane_pacjentow.Size = new System.Drawing.Size(152, 25);
-            this.btn_dane_pacjentow.TabIndex = 3;
-            this.btn_dane_pacjentow.Text = "DANE PACJENTOW";
-            this.btn_dane_pacjentow.UseVisualStyleBackColor = true;
-            this.btn_dane_pacjentow.Click += new System.EventHandler(this.btn_dane_pacjentow_Click);
             // 
             // label1
             // 
@@ -99,7 +89,7 @@
             this.btn_przejdz_autorzy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_przejdz_autorzy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_przejdz_autorzy.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_przejdz_autorzy.Location = new System.Drawing.Point(12, 218);
+            this.btn_przejdz_autorzy.Location = new System.Drawing.Point(12, 268);
             this.btn_przejdz_autorzy.Name = "btn_przejdz_autorzy";
             this.btn_przejdz_autorzy.Size = new System.Drawing.Size(558, 44);
             this.btn_przejdz_autorzy.TabIndex = 6;
@@ -145,17 +135,36 @@
             this.btn_run_test.UseVisualStyleBackColor = true;
             this.btn_run_test.Click += new System.EventHandler(this.btn_run_test_Click);
             // 
+            // btn_karta_pacjenta
+            // 
+            this.btn_karta_pacjenta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_karta_pacjenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_karta_pacjenta.FlatAppearance.BorderSize = 0;
+            this.btn_karta_pacjenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_karta_pacjenta.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_karta_pacjenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_karta_pacjenta.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_karta_pacjenta.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_karta_pacjenta.Location = new System.Drawing.Point(12, 218);
+            this.btn_karta_pacjenta.Name = "btn_karta_pacjenta";
+            this.btn_karta_pacjenta.Size = new System.Drawing.Size(558, 44);
+            this.btn_karta_pacjenta.TabIndex = 10;
+            this.btn_karta_pacjenta.Text = "Karty pacjentów";
+            this.btn_karta_pacjenta.UseVisualStyleBackColor = true;
+            this.btn_karta_pacjenta.Click += new System.EventHandler(this.btn_karta_pacjenta_Click);
+            // 
             // Form_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 553);
+            this.Controls.Add(this.btn_karta_pacjenta);
             this.Controls.Add(this.btn_run_test);
             this.Controls.Add(this.btn_przejdz_zarzadzaj_przychodnia);
             this.Controls.Add(this.btn_przejdz_autorzy);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_dane_pacjentow);
             this.Controls.Add(this.btn_zamknij);
             this.MinimumSize = new System.Drawing.Size(600, 600);
             this.Name = "Form_menu";
@@ -168,12 +177,12 @@
 
         #endregion
         private System.Windows.Forms.Button btn_zamknij;
-        private System.Windows.Forms.Button btn_dane_pacjentow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_przejdz_autorzy;
         private System.Windows.Forms.Button btn_przejdz_zarzadzaj_przychodnia;
         private System.Windows.Forms.Button btn_run_test;
+        private System.Windows.Forms.Button btn_karta_pacjenta;
     }
 }
 

@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_menu : Form
+    public  partial class Form_menu : Form
     {
         
         internal static ListaPacjentow PacjenciPrzychodni = new ListaPacjentow();
@@ -12,7 +12,8 @@ namespace Przychodnia_PO
 
         public Form_menu()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            CzyZaladowanoDane();
         }
 
         #region DANE TESTOWE
@@ -31,8 +32,16 @@ namespace Przychodnia_PO
             LekarzePrzychodni.lista_lekarzy.Add(lekarz1);
 
             PacjenciPrzychodni.lista_pacjentow.Add(pawel);
-            pawel.ListaWizyt.Add(wizytaPawla);
+            pawel.HistoriaWizytPacjenta.Add(wizytaPawla);
+
             btn_run_test.Enabled = false;
+        }
+
+        private void CzyZaladowanoDane()
+        {
+            bool czyZaladowano = PacjenciPrzychodni.lista_pacjentow.Count > 0 && LekarzePrzychodni.lista_lekarzy.Count > 0;
+            if (czyZaladowano)
+                btn_run_test.Enabled = false;
         }
         #endregion
 
@@ -45,7 +54,12 @@ namespace Przychodnia_PO
             this.Hide();
 
         }
-
+        private void btn_karta_pacjenta_Click(object sender, EventArgs e)
+        {
+            Form_karta_pacjenta f_karta_pacjenta = new Form_karta_pacjenta();
+            f_karta_pacjenta.Show();
+            this.Hide();
+        }
         private void btn_przejdz_autorzy_Click(object sender, EventArgs e)
         {
             Form_autorzy f_autorzy = new Form_autorzy();
@@ -56,7 +70,7 @@ namespace Przychodnia_PO
         
         private void btn_dane_pacjentow_Click(object sender, EventArgs e)
         {
-            Form_dane_pacjent f_dane_pacjent = new Form_dane_pacjent();
+            Form_karta_pacjenta f_dane_pacjent = new Form_karta_pacjenta();
             f_dane_pacjent.Show();
             this.Hide();
         }
@@ -73,8 +87,9 @@ namespace Przychodnia_PO
         }
 
 
+
         #endregion
 
-      
+        
     }
 }

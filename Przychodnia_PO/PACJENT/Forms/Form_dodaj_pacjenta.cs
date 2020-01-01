@@ -5,7 +5,6 @@ namespace Przychodnia_PO
 {
     public partial class Form_dodaj_pacjenta : Form
     {
-
         public Form_dodaj_pacjenta()
         {
             InitializeComponent();
@@ -15,17 +14,17 @@ namespace Przychodnia_PO
         private void btn_dodaj_Click(object sender, EventArgs e)
         {
             bool CzyWypelniony = String.IsNullOrEmpty(tB_id.Text) || String.IsNullOrEmpty(tB_imie.Text) || String.IsNullOrEmpty(tB_nazwisko.Text) || String.IsNullOrEmpty(tB_wiek.Text) || String.IsNullOrEmpty(tB_nr_telefonu.Text);
-
-            if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
+       
+            if (CzyWypelniony)
             {
-                MessageBox.Show("Pacjent z takim PESELEM już istnieje. Wprowadź poprawne dane.");
+                MessageBox.Show("Wypełnij wszystkie pola!");
                 return;
             }
             else
             {
-                if (CzyWypelniony)
+                if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
                 {
-                    MessageBox.Show("Wypełnij wszystkie pola!");
+                    MessageBox.Show("Pacjent z takim PESELEM już istnieje. Wprowadź poprawne dane.");
                     return;
                 }
                 Form_menu.PacjenciPrzychodni.DodajPacjenta(tB_imie.Text, tB_nazwisko.Text, int.Parse(tB_wiek.Text), long.Parse(tB_id.Text), int.Parse(tB_nr_telefonu.Text));

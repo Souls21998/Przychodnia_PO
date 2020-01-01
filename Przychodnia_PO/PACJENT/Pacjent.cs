@@ -9,14 +9,14 @@ namespace Przychodnia_PO
 {
     class Pacjent : Osoba
     {
-        public List<Wizyta> ListaWizyt = new List<Wizyta>();
+        public List<Wizyta> HistoriaWizytPacjenta = new List<Wizyta>();
         public Pacjent(string imie, string nazwisko, int wiek, long ID, int nr_telefonu): base(imie, nazwisko, wiek, ID, nr_telefonu)
         {
             
         }
-        public List<ListViewItem> WyswietlListeWizyt()
+        public List<ListViewItem> WyswietlListeHistoriaPacjenta()
         {
-            var lista = ListaWizyt;
+            var lista = HistoriaWizytPacjenta;
             List<ListViewItem> lista_elementow = new List<ListViewItem>();
             foreach (var item in lista)
             {

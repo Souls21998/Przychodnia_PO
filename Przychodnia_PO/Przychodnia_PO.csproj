@@ -70,11 +70,11 @@
     <Compile Include="Form_zarzadzaj_przychodnia.Designer.cs">
       <DependentUpon>Form_zarzadzaj_przychodnia.cs</DependentUpon>
     </Compile>
-    <Compile Include="PACJENT\Forms\Form_dane_pacjent.cs">
+    <Compile Include="PACJENT\Forms\Form_karta_pacjenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PACJENT\Forms\Form_dane_pacjent.Designer.cs">
-      <DependentUpon>Form_dane_pacjent.cs</DependentUpon>
+    <Compile Include="PACJENT\Forms\Form_karta_pacjenta.Designer.cs">
+      <DependentUpon>Form_karta_pacjenta.cs</DependentUpon>
     </Compile>
     <Compile Include="PACJENT\Forms\Form_dodaj_pacjenta.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     <EmbeddedResource Include="Form_zarzadzaj_przychodnia.resx">
       <DependentUpon>Form_zarzadzaj_przychodnia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PACJENT\Forms\Form_dane_pacjent.resx">
-      <DependentUpon>Form_dane_pacjent.cs</DependentUpon>
+    <EmbeddedResource Include="PACJENT\Forms\Form_karta_pacjenta.resx">
+      <DependentUpon>Form_karta_pacjenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PACJENT\Forms\Form_dodaj_pacjenta.resx">
       <DependentUpon>Form_dodaj_pacjenta.cs</DependentUpon>
