@@ -18,6 +18,11 @@ namespace Przychodnia_PO
 
         #region DANE TESTOWE
 
+        //PACJENCI
+
+        //LEKARZE
+
+        //WIZYTY
 
         Pacjent pawel = new Pacjent("Paweł", "a", 12, 1222, 111111);
         Wizyta wizytaPawla = new Wizyta(DateTime.MinValue, "kardiologiczna", "zalamanie nerwowowe", "depresja", "nie ma juz ratunku");

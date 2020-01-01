@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Przychodnia_PO
 {
-    
     public enum Specjalizacja
     {
         lekarz_rodziny, kardiolog, psychiatra, ginekolog, neurolog, ortopeda
