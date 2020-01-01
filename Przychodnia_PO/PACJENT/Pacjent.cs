@@ -7,10 +7,10 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    class Pacjent : Osoba, IPacjent
+    class Pacjent : Osoba
     {
         public List<Wizyta> ListaWizyt = new List<Wizyta>();
-        public Pacjent(string imie, string nazwisko, int wiek, int ID, int nr_telefonu): base(imie, nazwisko, wiek, ID, nr_telefonu)
+        public Pacjent(string imie, string nazwisko, int wiek, long ID, int nr_telefonu): base(imie, nazwisko, wiek, ID, nr_telefonu)
         {
             
         }

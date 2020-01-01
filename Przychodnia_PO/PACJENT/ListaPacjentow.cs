@@ -4,16 +4,16 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public class Pacjenci : IPacjent
+    public class ListaPacjentow : IPacjent
     {
         internal List<Pacjent> lista_pacjentow;
 
-        public Pacjenci()
+        public ListaPacjentow()
         {
-            this.lista_pacjentow = new List<Pacjent>();
+            this.lista_pacjentow = new List<Pacjent>(); 
         }
 
-        public void DodajPacjenta(string imie, string nazwisko, int wiek, int ID, int nr_telefonu)
+        public void DodajPacjenta(string imie, string nazwisko, int wiek, long ID, int nr_telefonu)
         {
             Pacjent pacjent = new Pacjent(imie, nazwisko, wiek, ID, nr_telefonu);
             lista_pacjentow.Add(pacjent);
@@ -35,7 +35,7 @@ namespace Przychodnia_PO
             return lista_elementow;
         }
 
-        public void UsunPacjenta(int indeks)
+        public void UsunPacjenta(long indeks)
         {
             foreach (var item in lista_pacjentow.ToList()) 
             {

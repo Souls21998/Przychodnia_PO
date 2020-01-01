@@ -4,16 +4,16 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public class Lekarze : ILekarz
+    public class ListaLekarzy : ILekarz
     {
-        List<Lekarz> lista_lekarzy;
+        internal List<Lekarz> lista_lekarzy;
 
-        public Lekarze()
+        public ListaLekarzy()
         {
             this.lista_lekarzy = new List<Lekarz>();
         }
 
-        public void DodajLekarza(string imie, string nazwisko, int wiek, int ID, int nr_telefonu, Specjalizacja specjalizacja)
+        public void DodajLekarza(string imie, string nazwisko, int wiek, long ID, int nr_telefonu, Specjalizacja specjalizacja)
         {
             Lekarz lekarz = new Lekarz(imie, nazwisko, wiek, ID, nr_telefonu, specjalizacja);
             lista_lekarzy.Add(lekarz);
@@ -25,7 +25,7 @@ namespace Przychodnia_PO
             List<ListViewItem> lista_elementow = new List<ListViewItem>();
             foreach (var item in lista)
             {
-                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.nr_telefonu.ToString(), item.specjalizacja.ToString() };
+                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.wiek.ToString(), item.nr_telefonu.ToString(), item.specjalizacja.ToString() };
                 
                 var lvi = new ListViewItem(row);
 
@@ -35,9 +35,9 @@ namespace Przychodnia_PO
         }
 
       
-        public void UsunLekarza(int indeks)
+        public void UsunLekarza(long indeks)
         {
-            foreach (var item in lista_lekarzy.ToList()) //ToList() tworzy migawkę ponieważ lista nie nie moze byc modyfikowana w foreach
+            foreach (var item in lista_lekarzy.ToList())
             {
                 if (item.ID == indeks)
                 {

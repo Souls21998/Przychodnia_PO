@@ -16,7 +16,7 @@ namespace Przychodnia_PO
     {
         public Specjalizacja specjalizacja;
       
-        public Lekarz(string imie, string nazwisko, int wiek, int ID, int nr_telefonu, Specjalizacja specjalizacja) : base(imie, nazwisko, wiek, ID, nr_telefonu)
+        public Lekarz(string imie, string nazwisko, int wiek, long ID, int nr_telefonu, Specjalizacja specjalizacja) : base(imie, nazwisko, wiek, ID, nr_telefonu)
         {
             this.specjalizacja = specjalizacja;
         }

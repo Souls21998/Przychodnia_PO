@@ -11,10 +11,10 @@ namespace Przychodnia_PO
         public string imie;
         public string nazwisko;
         public int wiek;
-        public int ID;
+        public long  ID;
         public int nr_telefonu;
 
-        protected Osoba(string imie, string nazwisko, int wiek, int ID, int nr_telefonu)
+        protected Osoba(string imie, string nazwisko, int wiek, long ID, int nr_telefonu)
         {
             this.imie = imie;
             this.nazwisko = nazwisko;

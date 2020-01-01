@@ -1,43 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_lekarz : Forms
+    public partial class Form_lekarz : Form
     {
-        public Lekarze lekarze = new Lekarze();
 
         public Form_lekarz()
         {
             InitializeComponent();
+            AktualizacjaListView();
+        }
+
+        #region PRZYCISKI
+        private void btn_dodaj_lekarza_Click(object sender, EventArgs e)
+        {
+            Form_dodaj_lekarza f_dodaj_lekarza = new Form_dodaj_lekarza();
+            f_dodaj_lekarza.ShowDialog();
+            AktualizacjaListView();
+        }
+        private void btn_usun_lekarza_Click(object sender, EventArgs e)
+        {
+            Form_usun_lekarza f_usun_lekarza = new Form_usun_lekarza();
+            f_usun_lekarza.ShowDialog();
+            AktualizacjaListView();
         }
 
         private void btn_wstecz_Click(object sender, EventArgs e)
         {
-            Form_menu f_menu = new Form_menu();
+            Form_zarzadzaj_przychodnia f_zarzadzaj_przychodnia = new Form_zarzadzaj_przychodnia();
+            f_zarzadzaj_przychodnia.Show();
             this.Hide();
-            f_menu.Show();
-       
         }
+        #endregion
 
+        #region ZDARZENIA
         private void Form_lekarz_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+        #endregion
 
-        private void btn_test_Click(object sender, EventArgs e)
+        
+        #region FUNKCJE
+        private void AktualizacjaListView()
         {
-            lekarze.DodajLekarza("Paweł", "Bronk", 32, 980909, 997, Specjalizacja.ginekolog);
-            lekarze.DodajLekarza("Kamil", "Chomej", 27, 980908, 997112, Specjalizacja.kardiolog);
-            lekarze.DodajLekarza("Paweł", "Anton", 21, 980912, 76544321, Specjalizacja.psychiatra);
-            lekarze.UsunLekarza(980908);
-
-            foreach (var item in lekarze.WyswietlLekarza())
+            listView_lista_lekarzy.Items.Clear();
+            foreach (var item in Form_menu.LekarzePrzychodni.WyswietlLekarza())
             {
                 listView_lista_lekarzy.Items.Add(item);
             }
-     
-        }    
+        }
+
+
+        #endregion
     }
 }

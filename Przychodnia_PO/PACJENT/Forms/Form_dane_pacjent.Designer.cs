@@ -40,6 +40,7 @@
             this.Zalecenia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_wyswietl = new System.Windows.Forms.Button();
             this.btn_wstecz = new System.Windows.Forms.Button();
+            this.btn_test = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +86,7 @@
             this.Choroba,
             this.Zalecenia});
             this.listView_lista_wizyt.HideSelection = false;
-            this.listView_lista_wizyt.Location = new System.Drawing.Point(51, 118);
+            this.listView_lista_wizyt.Location = new System.Drawing.Point(32, 122);
             this.listView_lista_wizyt.Name = "listView_lista_wizyt";
             this.listView_lista_wizyt.Size = new System.Drawing.Size(927, 270);
             this.listView_lista_wizyt.TabIndex = 4;
@@ -140,11 +141,22 @@
             this.btn_wstecz.UseVisualStyleBackColor = true;
             this.btn_wstecz.Click += new System.EventHandler(this.btn_wstecz_Click);
             // 
+            // btn_test
+            // 
+            this.btn_test.Location = new System.Drawing.Point(481, 445);
+            this.btn_test.Name = "btn_test";
+            this.btn_test.Size = new System.Drawing.Size(75, 23);
+            this.btn_test.TabIndex = 7;
+            this.btn_test.Text = "button1";
+            this.btn_test.UseVisualStyleBackColor = true;
+            this.btn_test.Click += new System.EventHandler(this.btn_test_Click);
+            // 
             // Form_dane_pacjent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 502);
+            this.Controls.Add(this.btn_test);
             this.Controls.Add(this.btn_wstecz);
             this.Controls.Add(this.btn_wyswietl);
             this.Controls.Add(this.listView_lista_wizyt);
@@ -173,5 +185,6 @@
         private System.Windows.Forms.ColumnHeader Zalecenia;
         private System.Windows.Forms.Button btn_wyswietl;
         private System.Windows.Forms.Button btn_wstecz;
+        private System.Windows.Forms.Button btn_test;
     }
 }

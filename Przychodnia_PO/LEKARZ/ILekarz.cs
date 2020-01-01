@@ -5,8 +5,8 @@ namespace Przychodnia_PO
 {
     public interface ILekarz
     {
-        void DodajLekarza(string imie, string nazwisko, int wiek, int ID, int nr_telefonu, Specjalizacja specjalizacja);
+        void DodajLekarza(string imie, string nazwisko, int wiek, long ID, int nr_telefonu, Specjalizacja specjalizacja);
         List<ListViewItem> WyswietlLekarza();
-        void UsunLekarza(int indeks);
+        void UsunLekarza(long indeks);
     }
 }

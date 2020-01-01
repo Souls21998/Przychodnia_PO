@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_dane_pacjent : Forms
+    public partial class Form_dane_pacjent : Form
     {
         public Form_dane_pacjent()
         {
@@ -29,7 +29,7 @@ namespace Przychodnia_PO
         {
             listView_lista_wizyt.Items.Clear();
             var id = int.Parse(tB_id_pacjent.Text);
-            foreach (var item in pacjenci.lista_pacjentow)
+            foreach (var item in Form_menu.PacjenciPrzychodni.lista_pacjentow)
             {
                 if(item.ID == id)
                 {
@@ -46,8 +46,14 @@ namespace Przychodnia_PO
             }
         }
         #endregion
+
         #region ZDARZENIA
 
         #endregion
+
+        private void btn_test_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

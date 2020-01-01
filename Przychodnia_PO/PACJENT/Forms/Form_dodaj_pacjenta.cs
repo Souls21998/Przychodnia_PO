@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_dodaj_pacjenta : Forms
+    public partial class Form_dodaj_pacjenta : Form
     {
 
         public Form_dodaj_pacjenta()
@@ -18,30 +11,54 @@ namespace Przychodnia_PO
             InitializeComponent();
         }
 
+        #region PRZYCISKI
         private void btn_dodaj_Click(object sender, EventArgs e)
         {
             bool CzyWypelniony = String.IsNullOrEmpty(tB_id.Text) || String.IsNullOrEmpty(tB_imie.Text) || String.IsNullOrEmpty(tB_nazwisko.Text) || String.IsNullOrEmpty(tB_wiek.Text) || String.IsNullOrEmpty(tB_nr_telefonu.Text);
 
-            if(CzyWypelniony)
+            if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
             {
-                MessageBox.Show("Wypełnij wszystkie pola!");
+                MessageBox.Show("Pacjent z takim PESELEM już istnieje. Wprowadź poprawne dane.");
+                return;
             }
             else
             {
-                pacjenci.DodajPacjenta(tB_imie.Text, tB_nazwisko.Text, int.Parse(tB_wiek.Text), int.Parse(tB_id.Text), int.Parse(tB_nr_telefonu.Text));
+                if (CzyWypelniony)
+                {
+                    MessageBox.Show("Wypełnij wszystkie pola!");
+                    return;
+                }
+                Form_menu.PacjenciPrzychodni.DodajPacjenta(tB_imie.Text, tB_nazwisko.Text, int.Parse(tB_wiek.Text), long.Parse(tB_id.Text), int.Parse(tB_nr_telefonu.Text));
                 MessageBox.Show("Dodano pacjenta");
-                
-                tB_id.Clear();
-                tB_imie.Clear();
-                tB_nazwisko.Clear();
-                tB_wiek.Clear();
-                tB_nr_telefonu.Clear();
-            }  
+            }
+            this.Hide();
         }
 
         private void btn_wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
+        #endregion
+
+        #region ZDARZENIA
+        private void Form_dodaj_pacjenta_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+        }
+        #endregion
+
+        #region FUNKCJE
+        //sprawdza czy pacjent z takim peselem (ID) juz istnieje
+        private bool CzyJuzIstnieje(long ID)
+        {  
+            foreach (var item in Form_menu.PacjenciPrzychodni.lista_pacjentow)
+            {
+                if (item.ID == ID) return true;
+            }
+            return false;
+        }
+        #endregion
+
+        
     }
 }
