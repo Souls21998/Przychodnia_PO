@@ -192,6 +192,7 @@
             // 
             this.comboBox_specjalizacja.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_specjalizacja.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_specjalizacja.FormattingEnabled = true;
             this.comboBox_specjalizacja.Location = new System.Drawing.Point(213, 203);
             this.comboBox_specjalizacja.Name = "comboBox_specjalizacja";

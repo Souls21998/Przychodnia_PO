@@ -14,7 +14,7 @@ namespace Przychodnia_PO
         #region PRZYCISKI
         private void btn_dodaj_Click(object sender, EventArgs e)
         {
-            bool CzyWypelniony = String.IsNullOrEmpty(tB_id.Text) || String.IsNullOrEmpty(tB_imie.Text) || String.IsNullOrEmpty(tB_nazwisko.Text) || String.IsNullOrEmpty(tB_wiek.Text) || String.IsNullOrEmpty(tB_nr_telefonu.Text) || String.IsNullOrEmpty(comboBox_specjalizacja.SelectedItem.ToString());
+            bool CzyWypelniony = String.IsNullOrEmpty(tB_id.Text) || String.IsNullOrEmpty(tB_imie.Text) || String.IsNullOrEmpty(tB_nazwisko.Text) || String.IsNullOrEmpty(tB_wiek.Text) || String.IsNullOrEmpty(tB_nr_telefonu.Text) || comboBox_specjalizacja.SelectedItem == null;
 
             if (CzyWypelniony)
             {

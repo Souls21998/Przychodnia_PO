@@ -7,6 +7,7 @@ namespace Przychodnia_PO
     public class ListaLekarzy : ILekarz
     {
         internal List<Lekarz> lista_lekarzy;
+        internal Queue<Pacjent> KolejkaDoLekarza = new Queue<Pacjent>();
 
         public ListaLekarzy()
         {

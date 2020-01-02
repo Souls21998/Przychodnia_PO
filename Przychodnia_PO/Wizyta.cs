@@ -23,6 +23,5 @@ namespace Przychodnia_PO
             Choroba = choroba;
             Zalecenia = zalecenia;
         }
-
     }
 }

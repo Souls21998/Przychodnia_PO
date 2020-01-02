@@ -118,6 +118,7 @@
             // 
             // btn_wyswietl
             // 
+            this.btn_wyswietl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_wyswietl.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_wyswietl.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_wyswietl.Location = new System.Drawing.Point(19, 135);
@@ -130,6 +131,7 @@
             // 
             // btn_wstecz
             // 
+            this.btn_wstecz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_wstecz.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_wstecz.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_wstecz.Location = new System.Drawing.Point(12, 471);

@@ -35,6 +35,7 @@
             this.btn_przejdz_zarzadzaj_przychodnia = new System.Windows.Forms.Button();
             this.btn_run_test = new System.Windows.Forms.Button();
             this.btn_karta_pacjenta = new System.Windows.Forms.Button();
+            this.btn_umow_wizyte = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_zamknij
@@ -46,7 +47,7 @@
             this.btn_zamknij.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_zamknij.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_zamknij.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_zamknij.Location = new System.Drawing.Point(12, 318);
+            this.btn_zamknij.Location = new System.Drawing.Point(12, 368);
             this.btn_zamknij.Name = "btn_zamknij";
             this.btn_zamknij.Size = new System.Drawing.Size(558, 44);
             this.btn_zamknij.TabIndex = 2;
@@ -89,7 +90,7 @@
             this.btn_przejdz_autorzy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_przejdz_autorzy.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
             this.btn_przejdz_autorzy.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_przejdz_autorzy.Location = new System.Drawing.Point(12, 268);
+            this.btn_przejdz_autorzy.Location = new System.Drawing.Point(12, 318);
             this.btn_przejdz_autorzy.Name = "btn_przejdz_autorzy";
             this.btn_przejdz_autorzy.Size = new System.Drawing.Size(558, 44);
             this.btn_przejdz_autorzy.TabIndex = 6;
@@ -154,11 +155,31 @@
             this.btn_karta_pacjenta.UseVisualStyleBackColor = true;
             this.btn_karta_pacjenta.Click += new System.EventHandler(this.btn_karta_pacjenta_Click);
             // 
+            // btn_umow_wizyte
+            // 
+            this.btn_umow_wizyte.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_umow_wizyte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_umow_wizyte.FlatAppearance.BorderSize = 0;
+            this.btn_umow_wizyte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_umow_wizyte.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_umow_wizyte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_umow_wizyte.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_umow_wizyte.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_umow_wizyte.Location = new System.Drawing.Point(12, 268);
+            this.btn_umow_wizyte.Name = "btn_umow_wizyte";
+            this.btn_umow_wizyte.Size = new System.Drawing.Size(558, 44);
+            this.btn_umow_wizyte.TabIndex = 11;
+            this.btn_umow_wizyte.Text = "Umów wizytę";
+            this.btn_umow_wizyte.UseVisualStyleBackColor = true;
+            this.btn_umow_wizyte.Click += new System.EventHandler(this.btn_umow_wizyte_Click);
+            // 
             // Form_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 553);
+            this.Controls.Add(this.btn_umow_wizyte);
             this.Controls.Add(this.btn_karta_pacjenta);
             this.Controls.Add(this.btn_run_test);
             this.Controls.Add(this.btn_przejdz_zarzadzaj_przychodnia);
@@ -183,6 +204,7 @@
         private System.Windows.Forms.Button btn_przejdz_zarzadzaj_przychodnia;
         private System.Windows.Forms.Button btn_run_test;
         private System.Windows.Forms.Button btn_karta_pacjenta;
+        private System.Windows.Forms.Button btn_umow_wizyte;
     }
 }
 
