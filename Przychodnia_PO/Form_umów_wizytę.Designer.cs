@@ -55,7 +55,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(812, 48);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Umów wizytę";
+            this.label2.Text = "Harmonogram wizyt";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox_wybierz_lekarza

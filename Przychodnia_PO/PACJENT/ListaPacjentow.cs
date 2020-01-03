@@ -26,7 +26,7 @@ namespace Przychodnia_PO
             List<ListViewItem> lista_elementow = new List<ListViewItem>();
             foreach (var item in lista)
             {
-                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.nr_telefonu.ToString()};
+                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.wiek.ToString(), item.nr_telefonu.ToString()};
 
                 var lvi = new ListViewItem(row);
 

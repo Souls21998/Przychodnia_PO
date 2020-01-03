@@ -39,6 +39,7 @@ namespace Przychodnia_PO
             this.btn_dodaj_pacjenta = new System.Windows.Forms.Button();
             this.btn_usun_pacjenta = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.wiek = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btn_wstecz
@@ -65,6 +66,7 @@ namespace Przychodnia_PO
             this.ID,
             this.imie,
             this.nazwisko,
+            this.wiek,
             this.numer_telefonu});
             this.listView_lista_pacjentow.HideSelection = false;
             this.listView_lista_pacjentow.Location = new System.Drawing.Point(21, 60);
@@ -93,6 +95,7 @@ namespace Przychodnia_PO
             // 
             // numer_telefonu
             // 
+            this.numer_telefonu.DisplayIndex = 3;
             this.numer_telefonu.Text = "Numer telefonu";
             this.numer_telefonu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numer_telefonu.Width = 100;
@@ -137,6 +140,12 @@ namespace Przychodnia_PO
             this.label2.Text = "Lista pacjentów";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // wiek
+            // 
+            this.wiek.DisplayIndex = 4;
+            this.wiek.Text = "Wiek";
+            this.wiek.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form_pacjent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,6 +176,7 @@ namespace Przychodnia_PO
         private System.Windows.Forms.Button btn_dodaj_pacjenta;
         private System.Windows.Forms.Button btn_usun_pacjenta;
         private Label label2;
+        private ColumnHeader wiek;
 
         public new FormClosedEventHandler FormClosed { get; private set; }
     }
