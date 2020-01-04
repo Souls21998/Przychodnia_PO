@@ -42,6 +42,7 @@
             this.btn_dodaj_wizytę = new System.Windows.Forms.Button();
             this.lekarzBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lekarzBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_wykonaj_wizyte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -133,7 +134,7 @@
             this.btn_wstecz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_wstecz.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold);
             this.btn_wstecz.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btn_wstecz.Location = new System.Drawing.Point(583, 232);
+            this.btn_wstecz.Location = new System.Drawing.Point(583, 288);
             this.btn_wstecz.Name = "btn_wstecz";
             this.btn_wstecz.Size = new System.Drawing.Size(200, 50);
             this.btn_wstecz.TabIndex = 13;
@@ -162,11 +163,24 @@
             // 
             this.lekarzBindingSource1.DataSource = typeof(Przychodnia_PO.Lekarz);
             // 
+            // btn_wykonaj_wizyte
+            // 
+            this.btn_wykonaj_wizyte.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_wykonaj_wizyte.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_wykonaj_wizyte.Location = new System.Drawing.Point(583, 232);
+            this.btn_wykonaj_wizyte.Name = "btn_wykonaj_wizyte";
+            this.btn_wykonaj_wizyte.Size = new System.Drawing.Size(200, 50);
+            this.btn_wykonaj_wizyte.TabIndex = 15;
+            this.btn_wykonaj_wizyte.Text = "Wykonaj wizytę";
+            this.btn_wykonaj_wizyte.UseVisualStyleBackColor = true;
+            this.btn_wykonaj_wizyte.Click += new System.EventHandler(this.btn_wykonaj_wizyte_Click);
+            // 
             // Form_umów_wizytę
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(812, 483);
+            this.Controls.Add(this.btn_wykonaj_wizyte);
             this.Controls.Add(this.btn_dodaj_wizytę);
             this.Controls.Add(this.btn_wstecz);
             this.Controls.Add(this.listView_kolejka_do_lekarza);
@@ -201,5 +215,6 @@
         private System.Windows.Forms.ColumnHeader numer_telefonu;
         private System.Windows.Forms.Button btn_wstecz;
         private System.Windows.Forms.Button btn_dodaj_wizytę;
+        private System.Windows.Forms.Button btn_wykonaj_wizyte;
     }
 }

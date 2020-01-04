@@ -64,6 +64,18 @@
     <Compile Include="Form_umów_wizytę.Designer.cs">
       <DependentUpon>Form_umów_wizytę.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_wizyta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_wizyta.Designer.cs">
+      <DependentUpon>Form_wizyta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_wykonaj_wizyte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_wykonaj_wizyte.Designer.cs">
+      <DependentUpon>Form_wykonaj_wizyte.cs</DependentUpon>
+    </Compile>
     <Compile Include="LEKARZ\Forms\Form_dodaj_lekarza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +148,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_umów_wizytę.resx">
       <DependentUpon>Form_umów_wizytę.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_wizyta.resx">
+      <DependentUpon>Form_wizyta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_wykonaj_wizyte.resx">
+      <DependentUpon>Form_wykonaj_wizyte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LEKARZ\Forms\Form_dodaj_lekarza.resx">
       <DependentUpon>Form_dodaj_lekarza.cs</DependentUpon>

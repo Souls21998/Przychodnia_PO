@@ -32,6 +32,20 @@ namespace Przychodnia_PO
             f_menu.Show();
             this.Hide();
         }
+        private void btn_wykonaj_wizyte_Click(object sender, EventArgs e)
+        {
+            Form_wykonaj_wizyte f_wykonaj_wizyte = new Form_wykonaj_wizyte();
+            f_wykonaj_wizyte.ShowDialog();
+            try
+            {
+                var lekarzID = long.Parse(comboBox_wybierz_lekarza.SelectedItem.ToString());
+                AktualizacjaListView(lekarzID);
+            }
+            catch
+            {
+                return;
+            }
+        }
         #endregion
 
         #region ZDARZENIA
@@ -81,8 +95,9 @@ namespace Przychodnia_PO
 
 
 
+
         #endregion
 
-       
+        
     }
 }
