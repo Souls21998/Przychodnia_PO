@@ -25,6 +25,12 @@ namespace Przychodnia_PO
                     break;
                 }
             }
+            label_pacjent.Text = Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().ToString();
+            listView_lista_wizyt.Items.Clear();
+            foreach (var k in Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().WyswietlListeHistoriaPacjenta())
+            {
+                listView_lista_wizyt.Items.Add(k);
+            }
         }
 
         private void btn_wstecz_Click(object sender, EventArgs e)
@@ -34,7 +40,7 @@ namespace Przychodnia_PO
 
         private void btn_koniec_wizyty_Click(object sender, EventArgs e)
         {
-            bool CzyWypelniony = String.IsNullOrEmpty(dateTimePicker_data_wizyty.Text) || String.IsNullOrEmpty(tB_typ_porady.Text) || String.IsNullOrEmpty(tB_dolegliwosci.Text) || String.IsNullOrEmpty(tB_choroba.Text) || String.IsNullOrEmpty(tB_zalecenia.Text);
+            bool CzyWypelniony = String.IsNullOrEmpty(tB_typ_porady.Text) || String.IsNullOrEmpty(tB_dolegliwosci.Text) || String.IsNullOrEmpty(tB_choroba.Text) || String.IsNullOrEmpty(tB_zalecenia.Text);
             if (CzyWypelniony)
             {
                 MessageBox.Show("Wypełnij wszystkie pola!");
@@ -42,7 +48,8 @@ namespace Przychodnia_PO
             }
             else
             {
-                Wizyta wizyta = new Wizyta(DateTime.Parse(dateTimePicker_data_wizyty.Text), tB_typ_porady.Text, tB_dolegliwosci.Text, tB_choroba.Text, tB_zalecenia.Text);
+                DateTime now = DateTime.Now;
+                Wizyta wizyta = new Wizyta(now, tB_typ_porady.Text, tB_dolegliwosci.Text, tB_choroba.Text, tB_zalecenia.Text);
                 Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().HistoriaWizytPacjenta.Add(wizyta);
                 MessageBox.Show("Przeprowadzono wizytę!");
             }

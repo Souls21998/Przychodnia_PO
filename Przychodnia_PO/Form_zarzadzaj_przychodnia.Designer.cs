@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_wstecz = new System.Windows.Forms.Button();
+            this.btn_harmonogram_wizyt = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_przejdz_lekarz
@@ -116,11 +117,31 @@
             this.btn_wstecz.UseVisualStyleBackColor = true;
             this.btn_wstecz.Click += new System.EventHandler(this.btn_wstecz_Click);
             // 
+            // btn_harmonogram_wizyt
+            // 
+            this.btn_harmonogram_wizyt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_harmonogram_wizyt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_harmonogram_wizyt.FlatAppearance.BorderSize = 0;
+            this.btn_harmonogram_wizyt.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_harmonogram_wizyt.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_harmonogram_wizyt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_harmonogram_wizyt.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btn_harmonogram_wizyt.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btn_harmonogram_wizyt.Location = new System.Drawing.Point(12, 200);
+            this.btn_harmonogram_wizyt.Name = "btn_harmonogram_wizyt";
+            this.btn_harmonogram_wizyt.Size = new System.Drawing.Size(408, 44);
+            this.btn_harmonogram_wizyt.TabIndex = 12;
+            this.btn_harmonogram_wizyt.Text = "Harmonogram wizyt";
+            this.btn_harmonogram_wizyt.UseVisualStyleBackColor = true;
+            this.btn_harmonogram_wizyt.Click += new System.EventHandler(this.btn_harmonogram_wizyt_Click);
+            // 
             // Form_zarzadzaj_przychodnia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 373);
+            this.Controls.Add(this.btn_harmonogram_wizyt);
             this.Controls.Add(this.btn_wstecz);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -142,5 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_wstecz;
+        private System.Windows.Forms.Button btn_harmonogram_wizyt;
     }
 }

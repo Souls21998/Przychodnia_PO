@@ -1,6 +1,6 @@
 ﻿namespace Przychodnia_PO
 {
-    partial class Form_umów_wizytę
+    partial class Form_harmonogram_wizyt
     {
         /// <summary>
         /// Required designer variable.
@@ -40,9 +40,9 @@
             this.numer_telefonu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn_wstecz = new System.Windows.Forms.Button();
             this.btn_dodaj_wizytę = new System.Windows.Forms.Button();
+            this.btn_wykonaj_wizyte = new System.Windows.Forms.Button();
             this.lekarzBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lekarzBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_wykonaj_wizyte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(812, 48);
+            this.label2.Size = new System.Drawing.Size(812, 70);
             this.label2.TabIndex = 7;
             this.label2.Text = "Harmonogram wizyt";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,7 +101,7 @@
             this.listView_kolejka_do_lekarza.HideSelection = false;
             this.listView_kolejka_do_lekarza.Location = new System.Drawing.Point(16, 131);
             this.listView_kolejka_do_lekarza.Name = "listView_kolejka_do_lekarza";
-            this.listView_kolejka_do_lekarza.Size = new System.Drawing.Size(530, 340);
+            this.listView_kolejka_do_lekarza.Size = new System.Drawing.Size(545, 340);
             this.listView_kolejka_do_lekarza.TabIndex = 12;
             this.listView_kolejka_do_lekarza.UseCompatibleStateImageBehavior = false;
             this.listView_kolejka_do_lekarza.View = System.Windows.Forms.View.Details;
@@ -155,16 +155,9 @@
             this.btn_dodaj_wizytę.UseVisualStyleBackColor = true;
             this.btn_dodaj_wizytę.Click += new System.EventHandler(this.btn_dodaj_wizytę_Click);
             // 
-            // lekarzBindingSource
-            // 
-            this.lekarzBindingSource.DataSource = typeof(Przychodnia_PO.Lekarz);
-            // 
-            // lekarzBindingSource1
-            // 
-            this.lekarzBindingSource1.DataSource = typeof(Przychodnia_PO.Lekarz);
-            // 
             // btn_wykonaj_wizyte
             // 
+            this.btn_wykonaj_wizyte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_wykonaj_wizyte.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_wykonaj_wizyte.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_wykonaj_wizyte.Location = new System.Drawing.Point(583, 232);
@@ -175,7 +168,15 @@
             this.btn_wykonaj_wizyte.UseVisualStyleBackColor = true;
             this.btn_wykonaj_wizyte.Click += new System.EventHandler(this.btn_wykonaj_wizyte_Click);
             // 
-            // Form_umów_wizytę
+            // lekarzBindingSource
+            // 
+            this.lekarzBindingSource.DataSource = typeof(Przychodnia_PO.Lekarz);
+            // 
+            // lekarzBindingSource1
+            // 
+            this.lekarzBindingSource1.DataSource = typeof(Przychodnia_PO.Lekarz);
+            // 
+            // Form_harmonogram_wizyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,9 +190,9 @@
             this.Controls.Add(this.comboBox_wybierz_lekarza);
             this.Controls.Add(this.label2);
             this.MinimumSize = new System.Drawing.Size(830, 530);
-            this.Name = "Form_umów_wizytę";
+            this.Name = "Form_harmonogram_wizyt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Umów wizytę";
+            this.Text = "Harmonogram wizyt";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_umów_wizytę_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource1)).EndInit();

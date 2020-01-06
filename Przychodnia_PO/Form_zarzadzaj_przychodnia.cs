@@ -38,8 +38,14 @@ namespace Przychodnia_PO
             Application.Exit();
         }
 
+
         #endregion
 
-      
+        private void btn_harmonogram_wizyt_Click(object sender, EventArgs e)
+        {
+            Form_harmonogram_wizyt f_harmonogram_wizyt = new Form_harmonogram_wizyt();
+            f_harmonogram_wizyt.Show();
+            this.Hide();
+        }
     }
 }

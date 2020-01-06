@@ -25,11 +25,31 @@ namespace Przychodnia_PO
 
         private void btn_wykonaj_Click(object sender, EventArgs e)
         {
-            if (comboBox_wybierz_lekarza != null)
+            if (comboBox_wybierz_lekarza.Text != "")
             {
                 var id = long.Parse(comboBox_wybierz_lekarza.Text);
-                Form_wizyta f_wizyta = new Form_wizyta(id);
-                f_wizyta.ShowDialog();
+                int i;
+                for (i = 0; i < Form_menu.LekarzePrzychodni.lista_lekarzy.Count; i++)
+                {
+                    if (id == Form_menu.LekarzePrzychodni.lista_lekarzy[i].ID)
+                    {
+                        break;
+                    }
+                }
+                if (Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Count != 0)
+                {
+                    Form_wizyta f_wizyta = new Form_wizyta(id);
+                    f_wizyta.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Kolejka do tego lekarza jest pusta");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Wybierz ID lekarza");
             }
         }
 

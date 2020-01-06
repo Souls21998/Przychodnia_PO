@@ -48,7 +48,7 @@
             this.btn_wstecz.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_wstecz.Location = new System.Drawing.Point(10, 355);
             this.btn_wstecz.Name = "btn_wstecz";
-            this.btn_wstecz.Size = new System.Drawing.Size(460, 36);
+            this.btn_wstecz.Size = new System.Drawing.Size(520, 36);
             this.btn_wstecz.TabIndex = 2;
             this.btn_wstecz.Text = "Wstecz";
             this.btn_wstecz.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(482, 62);
+            this.label1.Size = new System.Drawing.Size(542, 62);
             this.label1.TabIndex = 5;
             this.label1.Text = "Autorzy Projektu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,23 +84,24 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(204, 22);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Numer indeksu: ******";
+            this.label3.Text = "Numer indeksu: 150788";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(181, 175);
+            this.label4.BackColor = System.Drawing.SystemColors.Control;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(6, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 22);
+            this.label4.Size = new System.Drawing.Size(579, 24);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Krótki opis";
+            this.label4.Text = "Projekt realizowany w ramach zajęć z programowania obiektowego";
             // 
             // Form_autorzy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 403);
+            this.ClientSize = new System.Drawing.Size(542, 403);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

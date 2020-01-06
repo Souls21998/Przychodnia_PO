@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public partial class Form_umów_wizytę : Form
+    public partial class Form_harmonogram_wizyt : Form
     {
-        public Form_umów_wizytę()
+        public Form_harmonogram_wizyt()
         {
             InitializeComponent();
             ComboBoxWybierzLekarza();
@@ -28,8 +28,8 @@ namespace Przychodnia_PO
         }
         private void btn_wstecz_Click(object sender, EventArgs e)
         {
-            Form_menu f_menu = new Form_menu();
-            f_menu.Show();
+            Form_zarzadzaj_przychodnia f_zarzadzaj_przychodnia = new Form_zarzadzaj_przychodnia();
+            f_zarzadzaj_przychodnia.Show();
             this.Hide();
         }
         private void btn_wykonaj_wizyte_Click(object sender, EventArgs e)

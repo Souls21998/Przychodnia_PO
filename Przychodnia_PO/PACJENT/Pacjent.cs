@@ -35,7 +35,7 @@ namespace Przychodnia_PO
 
         public override string ToString()
         {
-            return ($"PESEL: {this.ID} {this.imie} {this.nazwisko} {this.wiek} lat. Numer kontaktowy: {this.nr_telefonu}");
+            return ($"PESEL: {this.ID}. {this.imie} {this.nazwisko}, {this.wiek} lat. Numer kontaktowy: {this.nr_telefonu}");
         }
     }
 }

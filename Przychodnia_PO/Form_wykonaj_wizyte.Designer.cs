@@ -46,6 +46,7 @@
             // 
             // btn_wstecz
             // 
+            this.btn_wstecz.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_wstecz.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_wstecz.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_wstecz.Location = new System.Drawing.Point(26, 139);
@@ -70,6 +71,7 @@
             // 
             // btn_wykonaj
             // 
+            this.btn_wykonaj.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_wykonaj.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_wykonaj.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.btn_wykonaj.Location = new System.Drawing.Point(224, 139);
@@ -101,6 +103,7 @@
             this.Controls.Add(this.btn_wstecz);
             this.Controls.Add(this.comboBox_wybierz_lekarza);
             this.Name = "Form_wykonaj_wizyte";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_wykonaj_wizyte";
             this.ResumeLayout(false);
             this.PerformLayout();

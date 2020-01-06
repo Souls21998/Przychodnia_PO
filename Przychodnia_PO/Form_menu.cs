@@ -188,12 +188,7 @@ namespace Przychodnia_PO
             f_dane_pacjent.Show();
             this.Hide();
         }
-        private void btn_umow_wizyte_Click(object sender, EventArgs e)
-        {
-            Form_umów_wizytę f_umow_wizyte = new Form_umów_wizytę();
-            f_umow_wizyte.Show();
-            this.Hide();
-        }
+
         private void btn_zamknij_Click(object sender, EventArgs e)
         {
             Application.Exit();

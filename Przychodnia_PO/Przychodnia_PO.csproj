@@ -58,11 +58,11 @@
     <Compile Include="Form_dodaj_wizyte.Designer.cs">
       <DependentUpon>Form_dodaj_wizyte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_umów_wizytę.cs">
+    <Compile Include="Form_harmonogram_wizyt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_umów_wizytę.Designer.cs">
-      <DependentUpon>Form_umów_wizytę.cs</DependentUpon>
+    <Compile Include="Form_harmonogram_wizyt.Designer.cs">
+      <DependentUpon>Form_harmonogram_wizyt.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_wizyta.cs">
       <SubType>Form</SubType>
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="Form_dodaj_wizyte.resx">
       <DependentUpon>Form_dodaj_wizyte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_umów_wizytę.resx">
-      <DependentUpon>Form_umów_wizytę.cs</DependentUpon>
+    <EmbeddedResource Include="Form_harmonogram_wizyt.resx">
+      <DependentUpon>Form_harmonogram_wizyt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_wizyta.resx">
       <DependentUpon>Form_wizyta.cs</DependentUpon>
