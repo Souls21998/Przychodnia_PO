@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox_wybierz_lekarza = new System.Windows.Forms.ComboBox();
             this.label_dane_lekarza = new System.Windows.Forms.Label();
@@ -41,10 +40,6 @@
             this.btn_wstecz = new System.Windows.Forms.Button();
             this.btn_dodaj_wizytę = new System.Windows.Forms.Button();
             this.btn_wykonaj_wizyte = new System.Windows.Forms.Button();
-            this.lekarzBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lekarzBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -168,14 +163,6 @@
             this.btn_wykonaj_wizyte.UseVisualStyleBackColor = true;
             this.btn_wykonaj_wizyte.Click += new System.EventHandler(this.btn_wykonaj_wizyte_Click);
             // 
-            // lekarzBindingSource
-            // 
-            this.lekarzBindingSource.DataSource = typeof(Przychodnia_PO.Lekarz);
-            // 
-            // lekarzBindingSource1
-            // 
-            this.lekarzBindingSource1.DataSource = typeof(Przychodnia_PO.Lekarz);
-            // 
             // Form_harmonogram_wizyt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,8 +181,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Harmonogram wizyt";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_umów_wizytę_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lekarzBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,11 +189,9 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.BindingSource lekarzBindingSource;
         private System.Windows.Forms.ComboBox comboBox_wybierz_lekarza;
         private System.Windows.Forms.Label label_dane_lekarza;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.BindingSource lekarzBindingSource1;
         private System.Windows.Forms.ListView listView_kolejka_do_lekarza;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;

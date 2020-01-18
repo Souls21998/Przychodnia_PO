@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public class ListaLekarzy : ILekarz
+    public class ListaLekarzy : IListaLekarzy
     {
         internal List<Lekarz> lista_lekarzy;
         internal Queue<Pacjent> KolejkaDoLekarza = new Queue<Pacjent>();
@@ -26,7 +26,7 @@ namespace Przychodnia_PO
             List<ListViewItem> lista_elementow = new List<ListViewItem>();
             foreach (var item in lista)
             {
-                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.wiek.ToString(), item.nr_telefonu.ToString(), item.specjalizacja.ToString() };
+                var row = new string[] { item.ID.ToString(), item.imie.ToString(), item.nazwisko.ToString(), item.nr_telefonu.ToString(), item.specjalizacja.ToString(), item.wiek.ToString(), };
                 
                 var lvi = new ListViewItem(row);
 

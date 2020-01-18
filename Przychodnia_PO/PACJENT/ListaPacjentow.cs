@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Przychodnia_PO
 {
-    public class ListaPacjentow : IPacjent
+    public class ListaPacjentow : IListaPacjentow
     {
         internal List<Pacjent> lista_pacjentow;
 

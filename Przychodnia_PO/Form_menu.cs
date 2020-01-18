@@ -50,14 +50,14 @@ namespace Przychodnia_PO
         Wizyta pacjent1_wiz1 = new Wizyta(DateTime.Parse("5 / 1 / 2008 8:30:52 AM"),"konsultacja", "zalamanie nerwowowe", "depresja", "nie ma juz ratunku");
         Wizyta pacjent1_wiz2 = new Wizyta(DateTime.Parse("15 / 1 / 2008 8:30:00 AM"), "terapia", "zalamanie nerwowowe", "depresja", "antydepresanty i Xanax");
         Wizyta pacjent2_wiz1 = new Wizyta(DateTime.Parse("14 / 5 / 2012 10:30:52 AM"), "konsultacja", "zaburzenia osobowości", "osobować mnoga", "elektrowstrząsy");
-        Wizyta pacjent3_wiz1 = new Wizyta(DateTime.Parse("22 / 11 / 2015 11:30:52 AM"), "konsultacja", "próba samobujcza", "depresja", "zamkniecie w ośrodku psychiatrycznym");
+        Wizyta pacjent3_wiz1 = new Wizyta(DateTime.Parse("22 / 11 / 2015 11:30:52 AM"), "konsultacja", "próba samobójcza", "depresja", "zamkniecie w ośrodku psychiatrycznym");
 
         Wizyta pacjent4_wiz1 = new Wizyta(DateTime.Parse("12 / 4 / 2009 11:30:52 AM"), "konsultacja", "nadciśnienie", "nadciśnienie tętnicze", "leki");
         Wizyta pacjent5_wiz1 = new Wizyta(DateTime.Parse("13 / 5 / 2018 11:30:52 AM"), "konsultacja", "zawał", "ostry zespół wieńcowy", "by-pass");
         Wizyta pacjent6_wiz1 = new Wizyta(DateTime.Parse("14 / 6 / 2014 12:30:52 AM"), "konsultacja", "nadciśnienie", "nadciśnienie tętnicze", "leki");
 
         Wizyta pacjent7_wiz1 = new Wizyta(DateTime.Parse("18 / 4 / 2014 12:30:52 AM"), "konsultacja", "kaszel,katar, osłabienie", "grypa", "leki");
-        Wizyta pacjent8_wiz1 = new Wizyta(DateTime.Parse("19 / 2 / 2014 12:30:52 AM"), "konsultacja", "ból gardła, gorączka", "zapalenie gardła", "leki");
+        Wizyta pacjent8_wiz1 = new Wizyta(DateTime.Parse("19 / 2 / 2014 12:30:52 AM"), "konsultacja", "ból gardła, gorączka", "zapalenie gardła", "krzesło elektryczne");
         Wizyta pacjent9_wiz1 = new Wizyta(DateTime.Parse("20 / 1 / 2015 12:30:52 AM"), "konsultacja", "ból brzucha, wymioty, gorączka", "zapalenie wyrostka", "skierowanie do szpitala");
 
         Wizyta pacjent10_wiz1 = new Wizyta(DateTime.Parse("13 / 4 / 2014 12:30:52 AM"), "konsultacja", "uraz głowy", "krwiak", "operacja");
@@ -65,7 +65,7 @@ namespace Przychodnia_PO
         Wizyta pacjent12_wiz1 = new Wizyta(DateTime.Parse("5 / 11 / 2019 11:30:52 AM"), "konsultacja", "uraz głowy", "krwiak", "operacja");
 
         Wizyta pacjent13_wiz1 = new Wizyta(DateTime.Parse("6 / 8 / 2019 12:30:52 AM"), "konsultacja", "ból nadgarstka", "złamanie", "gips");
-        Wizyta pacjent14_wiz1 = new Wizyta(DateTime.Parse("7 / 1 / 2012 7:30:52 AM"), "konsultacja", "ból nogi", "złamanie", "gips");
+        Wizyta pacjent14_wiz1 = new Wizyta(DateTime.Parse("7 / 1 / 2012 7:30:52 AM"), "konsultacja", "ból nogi", "złamanie", "czteropak Harnasia");
         Wizyta pacjent15_wiz1 = new Wizyta(DateTime.Parse("11 / 9 / 2011 8:30:52 AM"), "konsultacja", "otwarte złamanie nogi", "złamanie kości piszczelowej z przemieszczeniem", "operacja");
 
         Wizyta pacjent16_wiz1 = new Wizyta(DateTime.Parse("10 / 12 / 2009 12:30:52 AM"), "badanie kontrolne", "badanie kontrolne", "ok", "brak");

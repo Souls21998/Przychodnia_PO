@@ -30,6 +30,12 @@ namespace Przychodnia_PO
             f_menu.Show();
             this.Hide();
         }
+        private void btn_harmonogram_wizyt_Click(object sender, EventArgs e)
+        {
+            Form_harmonogram_wizyt f_harmonogram_wizyt = new Form_harmonogram_wizyt();
+            f_harmonogram_wizyt.Show();
+            this.Hide();
+        }
         #endregion
 
         #region ZDARZENIA
@@ -41,11 +47,6 @@ namespace Przychodnia_PO
 
         #endregion
 
-        private void btn_harmonogram_wizyt_Click(object sender, EventArgs e)
-        {
-            Form_harmonogram_wizyt f_harmonogram_wizyt = new Form_harmonogram_wizyt();
-            f_harmonogram_wizyt.Show();
-            this.Hide();
-        }
+        
     }
 }

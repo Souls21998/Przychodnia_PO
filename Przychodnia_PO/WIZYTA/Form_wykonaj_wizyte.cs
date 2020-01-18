@@ -18,6 +18,7 @@ namespace Przychodnia_PO
             ComboBoxWybierzLekarza();
         }
 
+        #region PRZYCISKI
         private void btn_wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -25,34 +26,42 @@ namespace Przychodnia_PO
 
         private void btn_wykonaj_Click(object sender, EventArgs e)
         {
-            if (comboBox_wybierz_lekarza.Text != "")
+            bool czyWybrano = (comboBox_wybierz_lekarza.Text == "");
+            if (czyWybrano)
+            {
+                MessageBox.Show("Wybierz ID lekarza");
+                
+            }
+            else
             {
                 var id = long.Parse(comboBox_wybierz_lekarza.Text);
                 int i;
-                for (i = 0; i < Form_menu.LekarzePrzychodni.lista_lekarzy.Count; i++)
+
+                for (i = 0; i < Form_menu.LekarzePrzychodni.lista_lekarzy.Count; i++) //szukanie lekarza z danym ID
                 {
                     if (id == Form_menu.LekarzePrzychodni.lista_lekarzy[i].ID)
                     {
                         break;
                     }
                 }
-                if (Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Count != 0)
+
+                bool czyPusta = (Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Count == 0); //sprawdzanie czy kolejka do lekarza jest pusta
+                
+                if (czyPusta)
+                {
+                    MessageBox.Show("Kolejka do tego lekarza jest pusta");
+                }
+                else
                 {
                     Form_wizyta f_wizyta = new Form_wizyta(id);
                     f_wizyta.ShowDialog();
                     this.Hide();
                 }
-                else
-                {
-                    MessageBox.Show("Kolejka do tego lekarza jest pusta");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Wybierz ID lekarza");
             }
         }
+        #endregion
 
+        #region FUNKCJE
         private void ComboBoxWybierzLekarza()
         {
             foreach (var item in Form_menu.LekarzePrzychodni.lista_lekarzy)
@@ -60,5 +69,8 @@ namespace Przychodnia_PO
                 comboBox_wybierz_lekarza.Items.Add(item.ID);
             }
         }
+        #endregion
+
+
     }
 }

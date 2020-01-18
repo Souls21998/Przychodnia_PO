@@ -12,27 +12,14 @@ namespace Przychodnia_PO
 {
     public partial class Form_wizyta : Form
     {
-        long id;
         int i;
         public Form_wizyta(long id)
         {
             InitializeComponent();
-            this.id = id;
-            for(i = 0;i < Form_menu.LekarzePrzychodni.lista_lekarzy.Count;i++)
-            {
-                if(id == Form_menu.LekarzePrzychodni.lista_lekarzy[i].ID)
-                {
-                    break;
-                }
-            }
-            label_pacjent.Text = Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().ToString();
-            listView_lista_wizyt.Items.Clear();
-            foreach (var k in Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().WyswietlListeHistoriaPacjenta())
-            {
-                listView_lista_wizyt.Items.Add(k);
-            }
+            ZaladujDane(id);
+            
         }
-
+        #region PRZYCISKI
         private void btn_wstecz_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -56,5 +43,26 @@ namespace Przychodnia_PO
             this.Hide();
             Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Dequeue();
         }
+        #endregion
+
+        #region FUNKCJE
+        void ZaladujDane(long id)
+        {
+            for (i = 0; i < Form_menu.LekarzePrzychodni.lista_lekarzy.Count; i++) //szukanie lekarza z danym ID
+            {
+                if (id == Form_menu.LekarzePrzychodni.lista_lekarzy[i].ID)
+                {
+                    break;
+                }
+            }
+            label_pacjent.Text = Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().ToString(); //podstawowe dane o pacjencie
+            listView_lista_wizyt.Items.Clear();
+            foreach (var k in Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().WyswietlListeHistoriaPacjenta()) //karta pacjenta
+            {
+                listView_lista_wizyt.Items.Add(k);
+            }
+        }
+        #endregion
+
     }
 }
