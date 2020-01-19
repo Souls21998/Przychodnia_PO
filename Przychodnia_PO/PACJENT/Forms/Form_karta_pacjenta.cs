@@ -31,14 +31,16 @@ namespace Przychodnia_PO
             }
             else
             {
-                if (CzyIstnieje(long.Parse(tB_id_pacjent.Text)))
+                long pesel = 0;
+                bool czyLiczba = long.TryParse(tB_id_pacjent.Text, out pesel);
+                if (!czyLiczba || !CzyIstnieje(pesel))
                 {
                     MessageBox.Show("Pacjent z takim PESELEM nie istnieje. Wprowadź poprawne dane.");
                     return;
                 }
                 foreach (var item in Form_menu.PacjenciPrzychodni.lista_pacjentow)
                 {
-                    if (item.ID == long.Parse(tB_id_pacjent.Text))
+                    if (item.ID == pesel)
                     {
                         label_pacjent.Text = string.Join(" ", item.ToString());
                         listView_lista_wizyt.Items.Clear();
@@ -68,9 +70,9 @@ namespace Przychodnia_PO
         {
             foreach (var item in Form_menu.PacjenciPrzychodni.lista_pacjentow)
             {
-                if (item.ID == ID) return false;
+                if (item.ID == ID) return true;
             }
-            return true;
+            return false;
         }
         #endregion
     }

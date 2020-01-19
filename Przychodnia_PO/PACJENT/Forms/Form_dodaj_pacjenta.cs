@@ -22,13 +22,24 @@ namespace Przychodnia_PO
             }
             else
             {
-                if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
+                int wiek = 0, nr_telefonu = 0;
+                long id;
+                bool czyLiczba = long.TryParse(tB_id.Text, out id) && int.TryParse(tB_wiek.Text, out wiek) && int.TryParse(tB_nr_telefonu.Text, out nr_telefonu);
+                if (czyLiczba)
                 {
-                    MessageBox.Show("Pacjent z takim PESELEM już istnieje. Wprowadź poprawne dane.");
+                    if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
+                    {
+                        MessageBox.Show("Pacjent z takim PESELEM już istnieje. Wprowadź poprawne dane.");
+                        return;
+                    }
+                    Form_menu.PacjenciPrzychodni.DodajPacjenta(tB_imie.Text, tB_nazwisko.Text, wiek, id, nr_telefonu);
+                    MessageBox.Show("Dodano pacjenta");
+                }
+                else
+                {
+                    MessageBox.Show("Zły format danych!");
                     return;
                 }
-                Form_menu.PacjenciPrzychodni.DodajPacjenta(tB_imie.Text, tB_nazwisko.Text, int.Parse(tB_wiek.Text), long.Parse(tB_id.Text), int.Parse(tB_nr_telefonu.Text));
-                MessageBox.Show("Dodano pacjenta");
             }
             this.Hide();
         }

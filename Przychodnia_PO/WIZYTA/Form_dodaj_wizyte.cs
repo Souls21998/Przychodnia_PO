@@ -23,13 +23,13 @@ namespace Przychodnia_PO
             }
             else
             {
-                    var pesel = long.Parse(tB_id_pacjenta.Text);
-                    var lekarzID = long.Parse(comboBox_wybierz_lekarza.SelectedItem.ToString());
-               
+               long pesel = 0;
+               var lekarzID = long.Parse(comboBox_wybierz_lekarza.SelectedItem.ToString());
+               bool czyLiczba = long.TryParse(tB_id_pacjenta.Text, out pesel);
 
-                Pacjent PacjentDoRejestracji = null;
+               Pacjent PacjentDoRejestracji = null;
 
-                if (CzyPacjentIstnieje(pesel))
+                if (czyLiczba && CzyPacjentIstnieje(pesel))
                 {
                     foreach (var item in Form_menu.PacjenciPrzychodni.lista_pacjentow)
                     {

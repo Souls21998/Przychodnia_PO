@@ -22,12 +22,13 @@ namespace Przychodnia_PO
             }
             else
             {
-                if (CzyIstnieje(long.Parse(tB_id_pacjent.Text)))
+                long pesel;
+                bool czyLiczba = long.TryParse(tB_id_pacjent.Text, out pesel);
+                if (!czyLiczba || CzyIstnieje(pesel) )
                 {
                     MessageBox.Show("Pacjent z takim PESELEM nie istnieje. Wprowadź poprawne dane.");
                     return;
                 }
-                var pesel = long.Parse(tB_id_pacjent.Text);
                 Form_menu.PacjenciPrzychodni.UsunPacjenta(pesel);
                 MessageBox.Show("Usunięto pacjenta!");
             }

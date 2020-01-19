@@ -23,14 +23,25 @@ namespace Przychodnia_PO
             }
             else
             {
-                if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
+                int wiek=0, nr_telefonu=0;
+                long id;
+                bool czyLiczba = long.TryParse(tB_id.Text, out id) && int.TryParse(tB_wiek.Text, out wiek) && int.TryParse(tB_nr_telefonu.Text, out nr_telefonu);
+                if (czyLiczba)
                 {
-                    MessageBox.Show("Lekarz z takim ID już istnieje. Wprowadź poprawne dane.");
+                    if (CzyJuzIstnieje(long.Parse(tB_id.Text)))
+                    {
+                        MessageBox.Show("Lekarz z takim ID już istnieje. Wprowadź poprawne dane.");
+                        return;
+                    }
+                    Specjalizacja spec = (Specjalizacja)Enum.Parse(typeof(Specjalizacja), comboBox_specjalizacja.SelectedItem.ToString());
+                    Form_menu.LekarzePrzychodni.DodajLekarza(tB_imie.Text, tB_nazwisko.Text, wiek, id, nr_telefonu, spec);
+                    MessageBox.Show("Dodano lekarza!");
+                }
+                else
+                {
+                    MessageBox.Show("Zły format danych!");
                     return;
                 }
-                Specjalizacja spec = (Specjalizacja)Enum.Parse(typeof(Specjalizacja), comboBox_specjalizacja.SelectedItem.ToString());
-                Form_menu.LekarzePrzychodni.DodajLekarza(tB_imie.Text, tB_nazwisko.Text, int.Parse(tB_wiek.Text), long.Parse(tB_id.Text), int.Parse(tB_nr_telefonu.Text), spec);
-                MessageBox.Show("Dodano lekarza!");
             }
             this.Hide();
         }

@@ -29,12 +29,13 @@ namespace Przychodnia_PO
             }
             else
             {
-                if (CzyIstnieje(long.Parse(tB_id_lekarz.Text)))
+                long id;
+                bool czyLiczba = long.TryParse(tB_id_lekarz.Text, out id);
+                if (!czyLiczba || CzyIstnieje(id))
                 {
                     MessageBox.Show("Lekarz z takim ID nie istnieje. Wprowadź poprawne dane.");
                     return;
                 }
-                var id = long.Parse(tB_id_lekarz.Text);
                 Form_menu.LekarzePrzychodni.UsunLekarza(id);
                 MessageBox.Show("Usunięto lekarza!");
             }

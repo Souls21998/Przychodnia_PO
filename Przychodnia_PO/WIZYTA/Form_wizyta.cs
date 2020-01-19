@@ -37,11 +37,11 @@ namespace Przychodnia_PO
             {
                 DateTime now = DateTime.Now;
                 Wizyta wizyta = new Wizyta(now, tB_typ_porady.Text, tB_dolegliwosci.Text, tB_choroba.Text, tB_zalecenia.Text);
-                Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().HistoriaWizytPacjenta.Add(wizyta);
+                Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Peek().HistoriaWizytPacjenta.Add(wizyta); //dodanie wizyty do karty pacjenta
                 MessageBox.Show("Przeprowadzono wizytę!");
             }
             this.Hide();
-            Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Dequeue();
+            Form_menu.LekarzePrzychodni.lista_lekarzy[i].KolejkaDoLekarza.Dequeue(); //usunięcie pierwszej osoby z kolejki
         }
         #endregion
 
